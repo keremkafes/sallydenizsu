@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sally Deniz KACHOWWW</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('arka.png') no-repeat center center/cover;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        h1 {
+            font-size: 3em;
+            text-align: center; /* Yazılar ortada kalacak */
+            transform: translateX(-50px); /* Yazıyı 50 piksel sola kaydır */
+        }
+       
+    </style>
+</head>
+<body>
+    <h1 id="romantik-yazi">❤️ Seni Çok Seviyorum ❤️</h1>
+    
+
+    <script>
+        const yazilar = [
+            "😎 BABALAR SÖZÜNÜ TUTAR 😎",
+            "❤️ DENİZSU ❤️",
+            "🤔 Sen bunun her zaman\nfarkında olmasan da 🤔",
+            "📍 Hayatımdaki yerinle 📍",
+            "👇 Bu konuda da olduğu gibi 👇",
+            "💪 Bana hep motivasyon\nkaynağı oluyorsun 💪",
+            "🙋‍♂️ Ben de bunu daima\nmutluluğumuza kullanacağıma\nsöz veriyorum 🙋‍♂️",
+            "🔁 Tekrardan 🔁",
+            "😍 İYİ Kİ VARSIN 😍",
+            "❤️ İYİ Kİ HAYATIMDASIN ❤️\n❤️ DENİZSUUUUU ❤️"
+        ];
+        
+        let index = 0;
+
+        function yaziyiDegistir() {
+            if (index < yazilar.length) {
+                document.getElementById("romantik-yazi").innerText = yazilar[index];
+                index++;
+                setTimeout(yaziyiDegistir, 5000); // 3 saniye sonra sıradaki yazıyı göster
+            }
+        }
+
+        yaziyiDegistir(); // Fonksiyonu başlat
+    </script>
+</body>
+</html>
